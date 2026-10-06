@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristo Republic Coffee - Shop Premium Coffee from El Salvador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Cristo Republic Coffee Logo">
+            </a>
+            <nav class="main-nav" id="mainNav" aria-label="Main">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="shop.html" class="nav-link" aria-current="page">Shop</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="ourcoffee.html" class="nav-link">Our Coffee</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item nav-item-club"><a href="club.html" class="nav-link">Join the Coffee Club</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group">
+                <a href="#" class="icon-link" aria-label="Search">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Account">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                </a>
+                <a href="#" class="icon-link" id="cartButton" aria-label="Cart">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count" hidden>0</span>
+                </a>
+                <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path class="menu-line menu-line-1" d="M4 7h16"/><path class="menu-line menu-line-2" d="M4 12h16"/><path class="menu-line menu-line-3" d="M4 17h16"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 80px;">
+        <!-- Shop Hero Section -->
+        <section class="shop-hero">
+            <div class="shop-hero-text">
+                <h1>Shop Our Collection</h1>
+                <h2>Bring Home the Rich<br>Flavor of El Salvador</h2>
+                <p>We're excited to share our latest offerings with you. Experience the rich heritage and exceptional quality of El Salvador's finest coffee beans.</p>
+                <a href="club.html" class="cta-button">Join the Coffee Club</a>
+            </div>
+        </section>
+
+
+        <!-- Filters -->
+        <div class="shop-filters" id="shop-all">
+            <div class="filter-chips" role="group" aria-label="Filter by category">
+                <button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="filter-chip" data-filter="Single-Origin Coffees" aria-pressed="false">Single-Origin</button>
+                <button type="button" class="filter-chip" data-filter="Signature Blends" aria-pressed="false">Signature Blends</button>
+                <button type="button" class="filter-chip" data-filter="Curated Gift Sets" aria-pressed="false">Gift Sets</button>
+            </div>
+            <label class="sort-control">
+                <span>Sort</span>
+                <select id="shopSort">
+                    <option value="featured">Featured</option>
+                    <option value="price-asc">Price: low to high</option>
+                    <option value="price-desc">Price: high to low</option>
+                </select>
+            </label>
+        </div>
+
+        <!-- Single-Origin Coffees -->
+        <section class="products-section">
+            <div class="products-container">
+                <h2 id="single-origin">Single-Origin Coffees</h2>
+                <div class="products-grid">
+                    <div class="product">
+                        <div class="product-image" style="background-image: url(https://rhoadsroast-coffees.com/cdn/shop/products/el-salvador-santa-ana-reserva-organic-natural-ep-fresh-100percent-arabica-coffee-beans-2-5-lbs-10-lbs-selections-rhoadsroast-coffees-and-importers-4_1500x.progressive.jpg?v=1657563861);"></div>
+                        <a class="product-link" href="product.html?id=santa-ana-reserve"><h3>Santa Ana Reserve</h3></a>
+                        <p>Medium roast with notes of chocolate and citrus</p>
+                        <div class="product-price">$24.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="santa-ana-reserve">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url(https://rhoadsroast-coffees.com/cdn/shop/products/2-lbs-5-lbs-el-salvador-shg-red-bourbon-buenos-aires-fresh-roasted-100percent-arabica-coffee-beans-rhoadsroast-coffees-and-importers-5_1500x.progressive.jpg?v=1657627708);"></div>
+                        <a class="product-link" href="product.html?id=usulutan-heights"><h3>Usulután Heights</h3></a>
+                        <p>Light roast with floral and honey notes</p>
+                        <div class="product-price">$22.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="usulutan-heights">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url(https://rhoadsroast-coffees.com/cdn/shop/products/el-salvador-shg-santa-maria-rfa-fresh-roasted-100percent-arabica-coffee-beans-rhoadsroast-coffees-and-importers-5_1500x.progressive.jpg?v=1657563721);"></div>
+                        <a class="product-link" href="product.html?id=la-libertad-estate"><h3>La Libertad Estate</h3></a>
+                        <p>Dark roast with caramel and nutty notes</p>
+                        <div class="product-price">$26.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="la-libertad-estate">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://rhoadsroast-coffees.com/cdn/shop/products/2-5-lbs-el-salvador-santa-ana-reserva-organic-natural-ep-fresh-lightmedium-roast-100percent-arabica-coffee-beans-rhoadsroast-coffees-and-importers-4_1500x.progressive.jpg?v=1657599139');"></div>
+                        <a class="product-link" href="product.html?id=chalatenango-select"><h3>Chalatenango Select</h3></a>
+                        <p>Medium-dark roast with berry notes</p>
+                        <div class="product-price">$25.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="chalatenango-select">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Blends -->
+        <section class="products-section alt">
+            <div class="products-container">
+                <h2 id="signature-blends">Signature Blends</h2>
+                <div class="products-grid">
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://public.readdy.ai/ai/img_res/a3cd9a18318013fd255866db230dae78.jpg');"></div>
+                        <a class="product-link" href="product.html?id=morning-ritual-blend"><h3>Morning Ritual Blend</h3></a>
+                        <p>Balanced blend perfect for your daily cup</p>
+                        <div class="product-price">$21.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="morning-ritual-blend">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://public.readdy.ai/ai/img_res/11898d65036e803f8733569d5ddbfb8b.jpg');"></div>
+                        <a class="product-link" href="product.html?id=espresso-artisan"><h3>Espresso Artisan</h3></a>
+                        <p>Rich and bold espresso blend</p>
+                        <div class="product-price">$23.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="espresso-artisan">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://cdn.dribbble.com/users/973/screenshots/2934743/attachments/609308/coffee-beans-2.jpg');"></div>
+                        <a class="product-link" href="product.html?id=decaf-dreams"><h3>Decaf Dreams</h3></a>
+                        <p>Swiss Water Process decaf blend</p>
+                        <div class="product-price">$20.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="decaf-dreams">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://i.pinimg.com/736x/c4/3a/05/c43a055deadcea6b1d021012e29492ae.jpg');"></div>
+                        <a class="product-link" href="product.html?id=baristas-choice"><h3>Barista's Choice</h3></a>
+                        <p>Complex blend for coffee enthusiasts</p>
+                        <div class="product-price">$27.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="baristas-choice">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curated Gift Sets -->
+        <section class="products-section">
+            <div class="products-container">
+                <h2 id="gift-sets">Curated Gift Sets</h2>
+                <div class="products-grid">
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://public.readdy.ai/ai/img_res/0f02f0cbd8c52925cab94ad2dcf7cdb5.jpg');"></div>
+                        <a class="product-link" href="product.html?id=tasters-collection"><h3>Taster's Collection</h3></a>
+                        <p>Four signature blends in one box</p>
+                        <div class="product-price">$89.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="tasters-collection">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://public.readdy.ai/ai/img_res/1f2fd887a7106c47e61f9ca6e3593049.jpg');"></div>
+                        <a class="product-link" href="product.html?id=brewing-essentials"><h3>Brewing Essentials</h3></a>
+                        <p>Complete starter kit with equipment</p>
+                        <div class="product-price">$149.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="brewing-essentials">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://public.readdy.ai/ai/img_res/aadf4cc1f8ef3d04d59dd3c70f735b75.jpg');"></div>
+                        <a class="product-link" href="product.html?id=connoisseurs-choice"><h3>Connoisseur's Choice</h3></a>
+                        <p>Premium selection with tasting notes</p>
+                        <div class="product-price">$199.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="connoisseurs-choice">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <div class="product-image" style="background-image: url('https://public.readdy.ai/ai/img_res/e18b82781fe21b355004c6b46f2efa4f.jpg');"></div>
+                        <a class="product-link" href="product.html?id=monthly-subscription"><h3>Monthly Subscription</h3></a>
+                        <p>Three months of curated coffee</p>
+                        <div class="product-price">$249.99</div>
+                        <button type="button" class="shop-button add-to-cart" data-id="monthly-subscription">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help choosing -->
+        <section class="story-section">
+            <div class="story-container">
+                <div class="story-text">
+                    <h2>Not sure where to start?</h2>
+                    <p>Try the Taster's Collection: four of our signature blends in one box, so you can find your favorite.</p>
+                    <div class="hero-actions">
+                        <a href="product.html?id=tasters-collection" class="cta-button">See the Taster's Collection</a>
+                        <a href="ourcoffee.html" class="text-link">Read the brew guide &rarr;</a>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="images/card4.jpeg" alt="A cup filled with roasted coffee beans">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button type="button" id="closeCart" class="close-cart" aria-label="Close cart">
+                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <span>$0.00</span>
+                </div>
+                <button class="cart-button">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column footer-logo">
+                    <img src="images/cristogold.png" alt="Cristo Republic Coffee Logo">
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="club.html">Coffee Club</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">LEARN</h3>
+                    <ul class="footer-links">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourcoffee.html">Our Coffee</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">FOLLOW US</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">
+                            <img src="images/x.png" alt="X">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/youtube.png" alt="YouTube">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Cristo Republic Coffee - All Rights Reserved</p>
+                <p class="footer-location"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>San Salvador, El Salvador</p>
+            </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

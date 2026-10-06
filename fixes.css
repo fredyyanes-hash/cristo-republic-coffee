@@ -1,0 +1,1786 @@
+/* Cristo Republic Coffee: contrast and shopping fixes.
+   Load AFTER styles.css on every page:
+   <link rel="stylesheet" href="fixes.css"> */
+
+:root {
+    --rose: #B1776B;        /* brand rose: backgrounds and accents only, never behind small white text */
+    --rose-deep: #8A5048;   /* white text on this is about 6.3:1 (passes WCAG AA) */
+    --gold: #EDB35C;        /* brand gold: button hover */
+    --espresso: #371304;    /* brand espresso: on the rose header gradient it is 4.6:1 to 6.2:1 */
+    --cream: #FFF4EA;
+}
+
+/* ---------- 1. Contrast ---------- */
+
+/* Nav: dark text on the rose header instead of white */
+.nav-link {
+    color: var(--espresso);
+    font-weight: 600;
+}
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link[aria-current="page"] {
+    color: var(--espresso);
+}
+.nav-link::after {
+    background: var(--espresso);
+}
+.nav-link[aria-current="page"]::after {
+    width: 100%;
+}
+
+/* Buttons with white text use the deep rose */
+.cta-button,
+.cart-button,
+.subscribe-btn,
+.offer-button,
+.product-button,
+.shop-button,
+.newsletter-form button,
+.add-to-cart,
+.pagination-number.active {
+    background-color: var(--rose-deep);
+    border-color: var(--rose-deep);
+    color: #fff;
+}
+/* Gold on hover, with espresso text so the label stays readable (about 9:1) */
+.cta-button:hover,
+.cart-button:hover,
+.subscribe-btn:hover,
+.offer-button:hover,
+.product-button:hover,
+.shop-button:hover,
+.newsletter-form button:hover,
+.add-to-cart:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--espresso);
+}
+
+/* Cart badge */
+.cart-count {
+    background-color: var(--espresso);
+    color: #fff;
+}
+.cart-count[hidden] {
+    display: none;
+}
+
+/* Headings on dark photo boxes: cream instead of rose */
+.about-text-overlay h1,
+.about-text-overlay h2,
+.story-section.alejandro-cristo .about-text-overlay h1,
+.story-section.sustainability .about-text-overlay h1,
+.story-section.our-coffee-hero .about-text-overlay h1,
+.coffee-section .coffee-text h2 {
+    color: var(--cream);
+}
+
+/* Blog hero sits on a light photo, so its title goes dark */
+.blog-hero-title,
+.newsletter-subscribe h3 {
+    color: var(--espresso);
+}
+
+/* Rose text on light backgrounds (categories, read-more links, prices) */
+.blog-category,
+.read-more,
+.pagination-arrow,
+.product-price,
+.price {
+    color: var(--rose-deep);
+}
+
+/* Text shadows make headings look blurry */
+h1, h2, h3, h4,
+.blog-hero-title,
+.section-title {
+    text-shadow: none !important;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--rose-deep);
+    outline-offset: 2px;
+}
+
+/* ---------- 2. Shopping ---------- */
+
+/* Product buttons were hidden until hover, so touch screens never showed them.
+   Always show them, pinned to the bottom of the card. */
+.product .product-button,
+.product .shop-button {
+    opacity: 1;
+    transform: none;
+}
+.product,
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+.product .product-button {
+    margin-top: auto;
+    align-self: center;
+}
+.product .product-link,
+.product-card .product-link {
+    color: inherit;
+    text-decoration: none;
+}
+.product .product-link:hover h3,
+.product-card .product-link:hover h3,
+.product-card .product-link:hover h4 {
+    text-decoration: underline;
+}
+.add-to-cart {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 16px;
+    border: 2px solid var(--rose-deep);
+    border-radius: 4px;
+    font: 600 14px/1 'Montserrat', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.add-to-cart.added {
+    background-color: #2F6B3A;
+    border-color: #2F6B3A;
+}
+
+/* Links like shop.html#single-origin land below the fixed header */
+.products-container h2[id] {
+    scroll-margin-top: 110px;
+}
+
+/* Cart drawer: sit above the fixed header so its title and close button show */
+.cart-modal {
+    z-index: 1100;
+}
+.cart-empty {
+    padding: 24px 0;
+    text-align: center;
+    color: #6B5D53;
+}
+.cart-item-qty {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+.cart-item-qty button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #d8c8c0;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+.cart-item-remove svg,
+.close-cart svg {
+    pointer-events: none;
+}
+
+/* Product page */
+.product-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: start;
+}
+.product-page-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #F4E9E1;
+}
+.product-breadcrumb {
+    font: 500 13px/1 'Montserrat', sans-serif;
+    margin-bottom: 18px;
+}
+.product-breadcrumb a {
+    color: var(--rose-deep);
+}
+.product-page h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    line-height: 1.1;
+    color: var(--espresso);
+    margin: 0 0 10px;
+}
+.product-page .product-price {
+    font: 600 24px/1 'Roboto', sans-serif;
+    margin: 0 0 20px;
+}
+.product-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0 0 20px;
+    list-style: none;
+}
+.product-notes li {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #F4E9E1;
+    color: var(--espresso);
+    font-size: 14px;
+}
+.product-page p {
+    line-height: 1.7;
+    max-width: 60ch;
+}
+.product-options {
+    display: grid;
+    gap: 16px;
+    margin: 28px 0;
+    max-width: 420px;
+}
+.product-options label {
+    display: block;
+    font: 600 13px/1 'Montserrat', sans-serif;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--espresso);
+}
+.product-options select,
+.product-options input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8c8c0;
+    border-radius: 4px;
+    font: 16px 'Roboto', sans-serif;
+    background: #fff;
+}
+.product-page .add-to-cart {
+    max-width: 420px;
+    padding: 16px;
+}
+.product-missing {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .product-page {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        padding-top: 32px;
+    }
+    .product-page h1 {
+        font-size: 32px;
+    }
+}
+
+/* ---------- 3. Typography: Bebas for page titles, Montserrat for everything else ---------- */
+
+body,
+body :not(h1) {
+    font-family: 'Montserrat', sans-serif !important;
+}
+h1 {
+    font-family: 'Bebas Neue', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: clamp(2.75rem, 6vw, 4.5rem) !important;
+    line-height: 1 !important;
+    letter-spacing: 0.02em;
+}
+h2 {
+    font-weight: 700 !important;
+    font-size: clamp(1.6rem, 3vw, 2.25rem) !important;
+    line-height: 1.25 !important;
+}
+h3 {
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.35 !important;
+}
+h4 {
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+}
+.blog-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+/* ---------- 4. One photo hero per page; other sections are split layouts ---------- */
+
+.story-section.alt {
+    background-color: #FFFFFF;
+}
+.story-section.alt::before {
+    display: none;
+}
+.story-container.reverse {
+    flex-direction: row-reverse;
+}
+.story-text h2 {
+    color: var(--rose-deep);
+    margin-bottom: 16px;
+}
+.story-text h3 {
+    color: var(--espresso);
+    margin-bottom: 12px;
+}
+.story-text p {
+    margin-bottom: 16px;
+}
+.story-text .coffee-list,
+.story-text .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+.story-text .coffee-list li,
+.story-text .checklist li {
+    display: flex;
+    gap: 10px;
+    color: #333;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+.story-text .coffee-list li::before,
+.story-text .checklist li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+    margin: 0;
+}
+@media (max-width: 1024px) {
+    .story-container.reverse {
+        flex-direction: column;
+    }
+}
+
+/* Blog post titles moved from h4 to h3 */
+.blog-content h3 {
+    color: var(--espresso);
+    margin-bottom: 8px;
+}
+
+/* ---------- 5. Modern refresh ---------- */
+
+body {
+    background-color: #FFFCF8;
+    color: #2B1A12;
+}
+
+/* Calm, flat backgrounds: drop the diagonal stripe texture */
+.story-section::before,
+.products-section::before,
+.shop-hero::before,
+.blog-section::before {
+    display: none;
+}
+
+/* Header: light, translucent, thin divider instead of a heavy shadow */
+header {
+    background: rgba(255, 250, 245, 0.88);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    backdrop-filter: saturate(1.4) blur(14px);
+    box-shadow: none;
+    border-bottom: 1px solid rgba(55, 19, 4, 0.08);
+    padding: 12px 0;
+}
+.nav-icon {
+    filter: brightness(0);
+    opacity: 0.85;
+}
+.nav-link {
+    letter-spacing: 0.04em;
+}
+
+/* Buttons: pill shape, gentle lift, no shimmer or bounce */
+.cta-button,
+.subscribe-btn,
+.offer-button,
+.product-button,
+.shop-button,
+.cart-button,
+.newsletter-form button,
+.add-to-cart {
+    border-radius: 999px;
+    padding: 14px 28px;
+    letter-spacing: 0.08em;
+    box-shadow: none;
+}
+/* Hover: the original light sweep plus lift, on the pill design */
+.add-to-cart,
+.ghost-button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.add-to-cart::before,
+.ghost-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+.add-to-cart:hover::before,
+.ghost-button:hover::before {
+    left: 100%;
+}
+.cta-button:hover,
+.subscribe-btn:hover,
+.offer-button:hover,
+.product-button:hover,
+.shop-button:hover,
+.product .shop-button:hover,
+.product .product-button:hover,
+.cart-button:hover,
+.newsletter-form button:hover,
+.add-to-cart:hover,
+.ghost-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(55, 19, 4, 0.3);
+}
+.cta-button:active,
+.subscribe-btn:active,
+.shop-button:active,
+.add-to-cart:active,
+.ghost-button:active {
+    transform: translateY(0) scale(0.98);
+}
+.ghost-button {
+    display: inline-block;
+    padding: 13px 26px;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
+}
+.ghost-button:hover {
+    background: #fff;
+    color: var(--espresso);
+}
+.text-link {
+    color: var(--rose-deep);
+    font-weight: 600;
+    border-bottom: 1.5px solid currentColor;
+    padding-bottom: 2px;
+}
+.text-link:hover {
+    color: var(--espresso);
+}
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px 22px;
+    margin-top: 8px;
+}
+
+/* Heroes: text sits on a soft shade at the side of the photo, no box covering it.
+   Same treatment on every page. */
+.hero,
+.shop-hero,
+.blog-hero,
+.story-section.alejandro-cristo,
+.story-section.our-coffee-hero {
+    min-height: 80vh;
+}
+.slide-content,
+.shop-hero-text,
+.story-section.alejandro-cristo .about-text-overlay,
+.story-section.our-coffee-hero .about-text-overlay {
+    background: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-align: left;
+    max-width: 500px;
+    z-index: 2;
+}
+.slide-content {
+    left: 8%;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+.shop-hero-text {
+    margin-left: 8%;
+}
+.shop-hero {
+    margin-top: 0;
+}
+.slide::after,
+.shop-hero::after,
+.story-section.our-coffee-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(25, 10, 4, 0.72) 0%, rgba(25, 10, 4, 0.45) 38%, rgba(25, 10, 4, 0) 68%);
+    pointer-events: none;
+    z-index: 1;
+}
+.story-section.alejandro-cristo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(270deg, rgba(25, 10, 4, 0.72) 0%, rgba(25, 10, 4, 0.45) 38%, rgba(25, 10, 4, 0) 68%);
+    pointer-events: none;
+    z-index: 1;
+}
+.story-section.alejandro-cristo .story-container,
+.story-section.our-coffee-hero .story-container {
+    z-index: 2;
+}
+.slide-content h1,
+.slide-content h2,
+.slide-content p,
+.shop-hero-text h1,
+.shop-hero-text h2,
+.shop-hero-text p,
+.about-text-overlay h1,
+.about-text-overlay h2,
+.about-text-overlay p {
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35) !important;
+}
+.slide-content p,
+.shop-hero-text p,
+.about-text-overlay p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+.slide-nav {
+    z-index: 3;
+}
+
+/* Section headings line up on the left on every page */
+.products-container h2,
+.brew-guide-title {
+    text-align: left;
+}
+.slide-content h1,
+.slide-content h2,
+.shop-hero-text h1,
+.shop-hero-text h2 {
+    color: #fff;
+    margin-bottom: 16px;
+}
+.slide-content p,
+.shop-hero-text p,
+.about-text-overlay p {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 400;
+}
+
+
+/* Section rhythm */
+.products-section,
+.story-section {
+    padding: 96px 0;
+}
+.products-container h2 {
+    margin-bottom: 32px;
+}
+.section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+.section-head h2 {
+    margin: 0 !important;
+    text-align: left;
+}
+
+/* Cards: hairline border, soft shadow, rounded photos */
+.product,
+.blog-post {
+    border: 1px solid #EFE4DC;
+    border-radius: 18px;
+    padding: 18px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(55, 19, 4, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.product:hover,
+.blog-post:hover {
+    transform: translateY(-4px);
+    border-color: #EFE4DC;
+    box-shadow: 0 14px 34px rgba(55, 19, 4, 0.12);
+}
+.product-image {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+.product:hover .product-image {
+    transform: none;
+}
+.product h3 {
+    color: var(--espresso);
+    margin-bottom: 6px;
+}
+.product p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+.product .product-notes {
+    margin: 0 0 14px;
+}
+.product .product-notes li {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+}
+.product-price {
+    margin-bottom: 16px;
+}
+.blog-post {
+    padding: 0;
+    overflow: hidden;
+}
+.story-image img {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(55, 19, 4, 0.15);
+}
+
+/* Home: value strip */
+.value-strip {
+    background: #fff;
+    border-bottom: 1px solid #F1E7DF;
+}
+.value-strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+}
+.value-item h3 {
+    color: var(--espresso);
+    margin-bottom: 6px;
+}
+.value-item h3::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--gold);
+    margin-bottom: 14px;
+}
+.value-item p {
+    color: #5C4A40;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Shop: filter bar */
+.shop-filters {
+    position: sticky;
+    top: 84px;
+    z-index: 20;
+    max-width: 1200px;
+    margin: 24px auto 0;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: rgba(255, 252, 248, 0.92);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid #EFE4DC;
+    border-radius: 999px;
+    scroll-margin-top: 100px;
+}
+.filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.filter-chip {
+    padding: 8px 16px;
+    border: 1px solid #E5D6CC;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--espresso);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.filter-chip:hover {
+    border-color: var(--rose-deep);
+}
+.filter-chip.active {
+    background: var(--espresso);
+    border-color: var(--espresso);
+    color: #fff;
+}
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--espresso);
+}
+.sort-control select {
+    padding: 8px 12px;
+    border: 1px solid #E5D6CC;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 0.85rem;
+}
+.products-section[hidden] {
+    display: none;
+}
+
+/* Footer: a little more air */
+.footer {
+    padding-top: 72px;
+}
+
+@media (max-width: 1024px) {
+    .value-strip-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+}
+@media (max-width: 768px) {
+    .slide-content {
+        left: 20px;
+        right: 20px;
+        top: auto;
+        bottom: 64px;
+        transform: none;
+    }
+    .shop-hero-text {
+        margin-left: 0;
+    }
+    .slide::after,
+    .shop-hero::after,
+    .story-section.our-coffee-hero::after,
+    .story-section.alejandro-cristo::after {
+        background: linear-gradient(0deg, rgba(25, 10, 4, 0.85) 0%, rgba(25, 10, 4, 0.55) 45%, rgba(25, 10, 4, 0.1) 80%);
+    }
+    .shop-filters {
+        top: 72px;
+        border-radius: 20px;
+    }
+    .products-section,
+    .story-section {
+        padding: 64px 0;
+    }
+}
+
+.products-container h2 {
+    color: var(--rose-deep);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 92vh;
+        min-height: 620px;
+    }
+    .slide-content p {
+        font-size: 1rem;
+    }
+    /* Filter bar scrolls sideways on phones instead of covering the page */
+    .shop-filters {
+        position: static;
+        margin: 16px 16px 0;
+        border-radius: 16px;
+    }
+    .filter-chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 2px;
+    }
+    .filter-chip {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-hero,
+    .story-section.alejandro-cristo,
+    .story-section.our-coffee-hero {
+        align-items: flex-end;
+        padding-bottom: 48px;
+    }
+}
+
+/* Phones: the header is shorter, so every page's content starts at the same spot as Home */
+@media (max-width: 768px) {
+    main {
+        padding-top: 60px !important;
+    }
+}
+
+/* =========================================================
+   6. Coffee Club page (club.html)
+   ========================================================= */
+.shop-hero.club-hero {
+    background-image: url('images/hero.jpeg');
+}
+.eyebrow {
+    font-size: 0.78rem !important;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    margin: 0 0 12px;
+}
+.shop-hero-text .eyebrow {
+    color: var(--gold) !important;
+    text-shadow: none !important;
+}
+.club-hero-price {
+    margin: 4px 0 24px;
+}
+.club-hero-price strong {
+    font-size: 1.5rem;
+    color: #fff;
+}
+.club-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.club-section-head {
+    max-width: 640px;
+    margin-bottom: 40px;
+}
+.club-section-head h2 {
+    margin: 0;
+    color: var(--espresso);
+}
+.club-lede {
+    margin-top: 12px;
+    color: #5a4036;
+    line-height: 1.7;
+}
+
+/* Statement band */
+.club-statement {
+    background: var(--cream);
+    padding: 88px 0;
+    text-align: center;
+}
+.club-statement-text {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+    line-height: 1.35;
+    font-weight: 600;
+    color: var(--espresso);
+}
+
+/* Reasons */
+.club-reasons,
+.club-regions {
+    padding: 96px 0;
+    background: #FFFCF8;
+}
+.club-reason-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.club-reason {
+    background: #fff;
+    border: 1px solid #EFE4DC;
+    border-radius: 18px;
+    padding: 32px 28px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.club-reason:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(55, 19, 4, 0.08);
+}
+.club-num {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+.club-reason h3 {
+    margin: 0 0 10px;
+    color: var(--espresso);
+}
+.club-reason p {
+    margin: 0;
+    color: #5a4036;
+    line-height: 1.7;
+}
+
+/* How it works */
+.club-how {
+    padding: 96px 0;
+    background: #fff;
+}
+.club-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    counter-reset: none;
+}
+.club-steps li {
+    border-top: 2px solid var(--espresso);
+    padding-top: 24px;
+}
+.club-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--rose-deep);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.club-steps h3 {
+    margin: 0 0 8px;
+    color: var(--espresso);
+}
+.club-steps p {
+    margin: 0;
+    color: #5a4036;
+    line-height: 1.7;
+}
+
+/* Regions */
+.club-region-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.club-region {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 28px;
+    border-radius: 18px;
+    background: var(--cream);
+    border: 1px solid #EFE4DC;
+    text-decoration: none;
+    color: var(--espresso);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.club-region:hover {
+    transform: translateY(-4px);
+    background: #FBE9D5;
+}
+.club-region-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.club-region-roast {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--rose-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.club-region-notes {
+    color: #5a4036;
+}
+
+/* Commitments: the one dark band on the page */
+.club-promise {
+    background: var(--espresso);
+    padding: 96px 0;
+}
+.club-promise .eyebrow {
+    color: var(--gold);
+}
+.club-promise .club-section-head h2 {
+    color: var(--cream);
+}
+.club-promise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 32px;
+}
+.club-promise-list li {
+    color: var(--cream);
+    padding: 18px 0 18px 32px;
+    border-top: 1px solid rgba(255, 244, 234, 0.2);
+    position: relative;
+    line-height: 1.5;
+}
+.club-promise-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* Join */
+.club-join {
+    background: var(--cream);
+    padding: 96px 0;
+    scroll-margin-top: 80px;
+}
+.club-join-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+.club-join-card {
+    background: #fff;
+    border: 1px solid #EFE4DC;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(55, 19, 4, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+.club-join-card h2 {
+    margin: 0 0 12px;
+    color: var(--espresso);
+}
+.club-price {
+    margin: 0;
+    color: #5a4036;
+}
+.club-price span {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--espresso);
+    margin-right: 6px;
+}
+.club-price-note {
+    color: #5a4036;
+    margin: 6px 0 20px;
+}
+.club-included {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+.club-included li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    color: var(--espresso);
+}
+.club-included li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+}
+.club-join-card label {
+    font-weight: 600;
+    color: var(--espresso);
+    margin-bottom: 8px;
+}
+.club-join-card select {
+    padding: 12px 16px;
+    border: 1px solid #D9C7BB;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fff;
+    color: var(--espresso);
+    margin-bottom: 20px;
+}
+.club-join-button {
+    width: 100%;
+    font-size: 1rem;
+}
+.club-alt {
+    margin: 20px 0 0;
+    font-size: 0.92rem;
+    color: #5a4036;
+}
+.club-alt a,
+.club-faq a {
+    color: var(--rose-deep);
+    font-weight: 600;
+}
+.club-faq h2 {
+    margin: 0 0 16px;
+    color: var(--espresso);
+}
+.club-faq details {
+    border-bottom: 1px solid #E6D6CB;
+    padding: 18px 0;
+}
+.club-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--espresso);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.club-faq summary::-webkit-details-marker {
+    display: none;
+}
+.club-faq summary::after {
+    content: '+';
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--rose-deep);
+    transition: transform 0.2s ease;
+}
+.club-faq details[open] summary::after {
+    transform: rotate(45deg);
+}
+.club-faq details p {
+    margin: 12px 0 0;
+    color: #5a4036;
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .club-reason-grid,
+    .club-region-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .club-promise-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .club-statement,
+    .club-reasons,
+    .club-regions,
+    .club-how,
+    .club-promise,
+    .club-join {
+        padding: 64px 0;
+    }
+    .club-reason-grid,
+    .club-region-grid,
+    .club-steps,
+    .club-promise-list,
+    .club-join-grid {
+        grid-template-columns: 1fr;
+    }
+    .club-join-card {
+        padding: 28px 22px;
+    }
+}
+.club-page .club-how {
+    padding-bottom: 40px;
+}
+
+/* =========================================================
+   7. Icons and the mobile menu
+   ========================================================= */
+.icon {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+}
+
+/* Header icons: one stroke set, espresso, gold dot of colour on hover */
+svg.nav-icon {
+    width: 22px;
+    height: 22px;
+    filter: none;
+    opacity: 1;
+    color: var(--espresso);
+    display: block;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.icon-link:hover svg.nav-icon {
+    color: var(--rose-deep);
+    transform: translateY(-1px);
+}
+.icon-link {
+    display: inline-flex;
+    padding: 4px;
+}
+
+/* Home value strip: icon badge replaces the little gold bar */
+.value-item h3::before {
+    display: none;
+}
+.value-icon,
+.club-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid #F1DFC9;
+    color: var(--rose-deep);
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+.club-icon {
+    margin-bottom: 20px;
+}
+
+/* Product page: three small facts under the button */
+.product-assurances {
+    list-style: none;
+    padding: 20px 0 0;
+    margin: 24px 0 0;
+    border-top: 1px solid #EFE4DC;
+    display: grid;
+    gap: 12px;
+}
+.product-assurances li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--espresso);
+    font-size: 0.95rem;
+}
+.product-assurances .icon {
+    font-size: 22px;
+    color: var(--rose-deep);
+}
+
+/* Empty cart */
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 48px 0;
+}
+.cart-empty .icon {
+    font-size: 40px;
+    color: var(--rose);
+}
+.cart-empty p {
+    margin: 0;
+}
+
+/* Footer location */
+.footer-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.footer-location .icon {
+    font-size: 16px;
+    color: var(--gold);
+}
+
+/* Hamburger: hidden on desktop, the Coffee Club link only lives in the phone menu */
+.menu-toggle,
+.nav-item-club {
+    display: none;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    padding: 4px;
+    margin-left: 2px;
+    cursor: pointer;
+    color: var(--espresso);
+    border-radius: 8px;
+}
+.menu-icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+.menu-line {
+    transition: transform 0.25s ease, opacity 0.2s ease;
+    transform-origin: 12px 12px;
+}
+.menu-open .menu-line-1 {
+    transform: translateY(5px) rotate(45deg);
+}
+.menu-open .menu-line-2 {
+    opacity: 0;
+}
+.menu-open .menu-line-3 {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: inline-flex;
+    }
+    .icon-group {
+        gap: 12px !important;
+    }
+    .main-nav {
+        position: fixed;
+        top: var(--header-h, 65px);
+        left: 0;
+        right: 0;
+        height: calc(100vh - var(--header-h, 65px));
+        height: calc(100dvh - var(--header-h, 65px));
+        background: #FFFCF8;
+        padding: 16px 24px 40px;
+        overflow-y: auto;
+        align-items: stretch;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+        z-index: 999;
+    }
+    .menu-open .main-nav {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .main-nav .nav-list {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    .main-nav .nav-item {
+        border-bottom: 1px solid #EFE4DC;
+    }
+    .main-nav .nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 4px;
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        color: var(--espresso);
+    }
+    .main-nav .nav-link::after {
+        content: '\2192';
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        color: var(--rose);
+        font-weight: 400;
+    }
+    .main-nav .nav-item-club {
+        display: block;
+        border-bottom: none;
+        margin-top: 28px;
+    }
+    .main-nav .nav-item-club .nav-link {
+        justify-content: center;
+        background: var(--rose-deep);
+        color: #fff;
+        border-radius: 999px;
+        padding: 16px 24px;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+    .main-nav .nav-item-club .nav-link::after {
+        display: none;
+    }
+    body.menu-open {
+        overflow: hidden;
+    }
+    body.menu-open header {
+        background: #FFFCF8;
+    }
+}
+
+/* =========================================================
+   8. Alignment: one left edge for every page
+   Content edge = the 1200px container minus its 20px padding.
+   ========================================================= */
+:root {
+    --edge: max(20px, calc((100% - 1160px) / 2));
+}
+/* Product grids line up with their section headings */
+.products-grid {
+    padding: 0 !important;
+}
+/* Price and button sit on the same line in every card in a row */
+.product .product-price {
+    margin-top: auto;
+}
+/* Hero text starts on the same edge as the logo and the sections below */
+.slide-content {
+    left: var(--edge);
+}
+.shop-hero {
+    padding-left: var(--edge);
+    padding-right: var(--edge);
+}
+.shop-hero-text {
+    margin-left: 0;
+}
+.blog-hero {
+    padding-left: var(--edge);
+    padding-right: var(--edge);
+}
+.club-container,
+.oc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Footer logo sits on the left edge like the columns beside it */
+.footer-logo {
+    justify-content: flex-start;
+}
+@media (max-width: 768px) {
+    .slide-content {
+        left: 20px;
+    }
+    .social-links {
+        justify-content: flex-start;
+    }
+}
+
+/* =========================================================
+   9. Our Coffee page
+   ========================================================= */
+.story-section.our-coffee-hero .hero-actions {
+    margin-top: 24px;
+}
+.oc-collection .eyebrow {
+    margin-bottom: 10px;
+}
+.oc-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 32px;
+    border-top: 1px solid #EBDCD1;
+}
+.oc-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 14px 4px;
+    border-bottom: 1px solid #EBDCD1;
+    text-decoration: none;
+    transition: background-color 0.2s ease, padding 0.2s ease;
+}
+.oc-list a:hover {
+    background: rgba(237, 179, 92, 0.12);
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.oc-name {
+    font-weight: 600;
+    color: var(--espresso);
+}
+.oc-notes {
+    font-size: 0.9rem;
+    color: var(--rose-deep);
+    text-align: right;
+}
+
+/* Brew guide carousel */
+.oc-brew {
+    background: var(--cream);
+    padding: 96px 0;
+    scroll-margin-top: 70px;
+}
+.oc-brew-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+.oc-brew-head h2 {
+    margin: 0;
+    color: var(--espresso);
+}
+.oc-lede {
+    max-width: 620px;
+    margin: 12px 0 0;
+    color: #5a4036;
+    line-height: 1.7;
+}
+.oc-arrows {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.oc-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid var(--espresso);
+    background: transparent;
+    color: var(--espresso);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.oc-arrow svg {
+    width: 22px;
+    height: 22px;
+}
+.oc-arrow:hover:not(:disabled) {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+.oc-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+.oc-track {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: var(--edge);
+    padding: 4px var(--edge) 12px;
+    scrollbar-width: none;
+}
+.oc-track::-webkit-scrollbar {
+    display: none;
+}
+.oc-card {
+    flex: 0 0 clamp(260px, 26vw, 340px);
+    scroll-snap-align: start;
+    background: #fff;
+    border: 1px solid #EFE4DC;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+}
+/* Every photo gets the same frame and is cropped to fill it, so nothing shrinks or stretches */
+.oc-media {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #EADBCF;
+}
+.oc-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+.oc-card:hover .oc-media img {
+    transform: scale(1.04);
+}
+.oc-card h3 {
+    margin: 22px 24px 8px;
+    color: var(--espresso);
+}
+.oc-card p {
+    margin: 0 24px 18px;
+    color: #5a4036;
+    line-height: 1.65;
+}
+.oc-card .text-link {
+    margin: auto 24px 0;
+    align-self: flex-start;
+    text-decoration: none;
+}
+
+/* Brew tips */
+.oc-tips {
+    background: #fff;
+    padding: 80px 0;
+}
+.oc-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.oc-tip h3 {
+    margin: 0 0 8px;
+    color: var(--espresso);
+}
+.oc-tip p {
+    margin: 0;
+    color: #5a4036;
+    line-height: 1.65;
+}
+
+/* Coffee Club band */
+.oc-club {
+    background: #F6E6D8;
+    padding: 72px 0;
+}
+.oc-club-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+.oc-club h2 {
+    margin: 0 0 10px;
+    color: var(--espresso);
+}
+.oc-club p:not(.eyebrow) {
+    margin: 0;
+    max-width: 560px;
+    color: #5a4036;
+    line-height: 1.7;
+}
+.oc-club .cta-button {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .oc-brew,
+    .oc-tips,
+    .oc-club {
+        padding: 64px 0;
+    }
+    .oc-arrows {
+        display: none;
+    }
+    .oc-card {
+        flex-basis: 78%;
+    }
+    .oc-tips-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .oc-club-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .oc-list a {
+        flex-direction: column;
+        gap: 2px;
+    }
+    .oc-notes {
+        text-align: left;
+    }
+}
+
+/* Section 8 continued: About and Our Coffee heroes use the same edge */
+.story-section.our-coffee-hero,
+.story-section.alejandro-cristo {
+    padding-left: var(--edge);
+    padding-right: var(--edge);
+}
+.story-section.our-coffee-hero .story-container,
+.story-section.alejandro-cristo .story-container {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    right: auto;
+}
+.story-section.our-coffee-hero .about-text-overlay,
+.story-section.alejandro-cristo .about-text-overlay {
+    margin: 0;
+}
+.blog-hero-container {
+    padding: 0;
+}
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;
+    }
+}
+.story-section.our-coffee-hero .story-container {
+    align-items: flex-start;
+}
+.story-section.alejandro-cristo .story-container {
+    align-items: flex-end;
+}
+@media (max-width: 768px) {
+    .story-section.alejandro-cristo .story-container {
+        align-items: flex-start;
+    }
+}
+
+/* About: Founders matches the other split sections (text and photo side by side, stacked on phones) */
+.about-section.founders .story-container {
+    justify-content: space-between;
+    gap: 48px;
+}
+.about-section.founders .story-text,
+.about-section.founders .story-image {
+    flex: 1 1 0;
+    max-width: none;
+}
+.about-section.founders .story-image {
+    height: auto;
+    align-self: stretch;
+    min-height: 520px;
+}
+.about-section.founders .story-image img {
+    border: none;
+    border-radius: 18px;
+}
+@media (max-width: 1024px) {
+    .about-section.founders .story-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+    .about-section.founders .story-image {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+    .about-section.founders .story-text,
+    .about-section.founders .story-image {
+        flex: none;
+    }
+}
+@media (max-width: 1024px) {
+    .about-section.founders .story-image {
+        max-height: 520px;
+    }
+}

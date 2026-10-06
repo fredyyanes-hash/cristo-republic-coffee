@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristo Republic Coffee - Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Cristo Republic Coffee Logo">
+            </a>
+            <nav class="main-nav" id="mainNav" aria-label="Main">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="ourcoffee.html" class="nav-link">Our Coffee</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link" aria-current="page">Blog</a></li>
+                    <li class="nav-item nav-item-club"><a href="club.html" class="nav-link">Join the Coffee Club</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group">
+                <a href="#" class="icon-link" aria-label="Search">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Account">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                </a>
+                <a href="#" class="icon-link" id="cartButton" aria-label="Cart">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count" hidden>0</span>
+                </a>
+                <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path class="menu-line menu-line-1" d="M4 7h16"/><path class="menu-line menu-line-2" d="M4 12h16"/><path class="menu-line menu-line-3" d="M4 17h16"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 80px;">
+        <!-- Blog Hero Section -->
+        <section class="blog-hero parallax" style="background-image: url('images/bloghero.jpeg');">
+            <div class="blog-hero-container">
+                <h1 class="blog-hero-title">Cristo Republic Coffee Blog</h1>
+                <p class="blog-hero-subtitle">News and updates, origin trips and our opinions on coffee in general brought to you by Cristo Republic.</p>
+                <div class="newsletter-subscribe">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter email">
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content Section -->
+        <section class="blog-section">
+            <div class="blog-container">
+                <div class="blog-welcome">
+                    <p>Welcome to our blog, where we share insights into the world of coffee, our sustainable practices, and the rich cultural heritage of El Salvador. Here, you’ll find stories, tips, and updates that connect you deeper with every sip of Cristo Republic Coffee.</p>
+                </div>
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <div class="blog-post">
+                        <div class="blog-image" style="background-image: url('images/pourover.jpeg');"></div>
+                        <div class="blog-content">
+                            <p class="blog-category">Brewing Guides</p>
+                            <h3>The Perfect Pour-Over: A Step-by-Step Guide</h3>
+                            <span class="blog-date">April 15, 2025</span>
+                            <p>Master the art of pour-over coffee with our comprehensive guide to achieving the perfect brew every time.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="blog-post">
+                        <div class="blog-image" style="background-image: url('images/blogcard2.jpeg');"></div>
+                        <div class="blog-content">
+                            <p class="blog-category">Origin Stories</p>
+                            <h3>Journey to El Salvador’s Finest Estates</h3>
+                            <span class="blog-date">April 10, 2025</span>
+                            <p>Explore beautiful coffee farms of El Salvador and learn about our direct trade relationships with local farmers.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 3 -->
+                    <div class="blog-post">
+                        <div class="blog-image" style="background-image: url('images/blogcard3.jpeg');"></div>
+                        <div class="blog-content">
+                            <p class="blog-category">Coffee Education</p>
+                            <h3>Understanding Coffee: Beginner’s Guide</h3>
+                            <span class="blog-date">April 5, 2025</span>
+                            <p>Learn the professional approach to coffee tasting and how we select our premium beans.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Separator -->
+                    <div class="blog-separator"></div>
+                    <!-- Blog Post 4 -->
+                    <div class="blog-post">
+                        <div class="blog-image" style="background-image: url('images/blogcard4.jpeg');"></div>
+                        <div class="blog-content">
+                            <p class="blog-category">Processing Methods</p>
+                            <h3>The Art of Coffee Processing, Behind the Scenes</h3>
+                            <span class="blog-date">March 30, 2025</span>
+                            <p>Discover how different processing methods affect the final taste of your coffee.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 5 -->
+                    <div class="blog-post">
+                        <div class="blog-image" style="background-image: url('images/blogcard5.jpeg');"></div>
+                        <div class="blog-content">
+                            <p class="blog-category">Cafe Culture</p>
+                            <h3>Modern Coffee Shop Design</h3>
+                            <span class="blog-date">March 25, 2025</span>
+                            <p>Explore the elements that make a coffee shop both functional and aesthetically pleasing.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 6 -->
+                    <div class="blog-post">
+                        <div class="blog-image" style="background-image: url('images/blogcard6.jpeg');"></div>
+                        <div class="blog-content">
+                            <p class="blog-category">Equipment Guide</p>
+                            <h3>Essential Brewing Equipment</h3>
+                            <span class="blog-date">March 20, 2025</span>
+                            <p>A comprehensive guide to the tools you need for brewing exceptional coffee at home.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="pagination-arrow pagination-prev">&larr; Previous</a>
+                    <div class="pagination-numbers">
+                        <a href="#" class="pagination-number active">1</a>
+                        <a href="#" class="pagination-number">2</a>
+                        <a href="#" class="pagination-number">3</a>
+                    </div>
+                    <a href="#" class="pagination-arrow pagination-next">Next &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button type="button" id="closeCart" class="close-cart" aria-label="Close cart">
+                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <span>$0.00</span>
+                </div>
+                <button class="cart-button">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column footer-logo">
+                    <img src="images/cristogold.png" alt="Cristo Republic Coffee Logo">
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="club.html">Coffee Club</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">LEARN</h3>
+                    <ul class="footer-links">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourcoffee.html">Our Coffee</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">FOLLOW US</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">
+                            <img src="images/x.png" alt="X">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/youtube.png" alt="YouTube">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Cristo Republic Coffee - All Rights Reserved</p>
+                <p class="footer-location"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>San Salvador, El Salvador</p>
+            </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

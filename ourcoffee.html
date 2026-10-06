@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristo Republic Coffee - Our Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Cristo Republic Coffee Logo">
+            </a>
+            <nav class="main-nav" id="mainNav" aria-label="Main">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="ourcoffee.html" class="nav-link" aria-current="page">Our Coffee</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item nav-item-club"><a href="club.html" class="nav-link">Join the Coffee Club</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group">
+                <a href="#" class="icon-link" aria-label="Search">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Account">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                </a>
+                <a href="#" class="icon-link" id="cartButton" aria-label="Cart">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count" hidden>0</span>
+                </a>
+                <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path class="menu-line menu-line-1" d="M4 7h16"/><path class="menu-line menu-line-2" d="M4 12h16"/><path class="menu-line menu-line-3" d="M4 17h16"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 80px;" class="ourcoffee-page">
+        <!-- Hero Section with Video -->
+        <section class="story-section parallax our-coffee-hero">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="images/ourcoffeehero1.mov" type="video/mp4">
+            </video>
+            <div class="story-container">
+                <div class="story-text about-text-overlay">
+                    <h1>Our Coffee</h1>
+                    <h2>A journey of flavor from the lush landscapes of El Salvador.</h2>
+                    <p>Our coffee is not just a beverage. It's a cultural experience and a testament to our commitment to quality, sustainability and the heritage of our homeland.</p>
+                    <div class="hero-actions">
+                        <a href="shop.html" class="cta-button">Shop Coffee</a>
+                        <a href="#brew" class="ghost-button">Brew Guide</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Single-Origin Coffees -->
+        <section class="story-section oc-collection" id="single-origin">
+            <div class="story-container">
+                <div class="story-text">
+                    <p class="eyebrow">Single-origin</p>
+                    <h2>One farm region in every cup</h2>
+                    <p>Each single-origin coffee has its own character and story, from the high-altitude farms of Santa Ana to the volcanic soils of Usulután.</p>
+                    <ul class="oc-list">
+                        <li><a href="product.html?id=santa-ana-reserve"><span class="oc-name">Santa Ana Reserve</span><span class="oc-notes">Medium roast · Chocolate, citrus</span></a></li>
+                        <li><a href="product.html?id=usulutan-heights"><span class="oc-name">Usulután Heights</span><span class="oc-notes">Light roast · Floral, honey</span></a></li>
+                        <li><a href="product.html?id=la-libertad-estate"><span class="oc-name">La Libertad Estate</span><span class="oc-notes">Dark roast · Caramel, nutty</span></a></li>
+                        <li><a href="product.html?id=chalatenango-select"><span class="oc-name">Chalatenango Select</span><span class="oc-notes">Medium-dark roast · Berry</span></a></li>
+                    </ul>
+                    <a href="shop.html#single-origin" class="cta-button">Shop Single-Origins</a>
+                </div>
+                <div class="story-image">
+                    <img src="images/ourstory1.jpeg" alt="Cups of single-origin coffee">
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Blends -->
+        <section class="story-section alt oc-collection" id="blends">
+            <div class="story-container reverse">
+                <div class="story-text">
+                    <p class="eyebrow">Signature blends</p>
+                    <h2>Balanced by our master roasters</h2>
+                    <p>Our blends combine the best characteristics of different beans to create harmonious and complex flavor profiles.</p>
+                    <ul class="oc-list">
+                        <li><a href="product.html?id=morning-ritual-blend"><span class="oc-name">Morning Ritual Blend</span><span class="oc-notes">Balanced, for your daily cup</span></a></li>
+                        <li><a href="product.html?id=espresso-artisan"><span class="oc-name">Espresso Artisan</span><span class="oc-notes">Rich and bold espresso</span></a></li>
+                        <li><a href="product.html?id=baristas-choice"><span class="oc-name">Barista's Choice</span><span class="oc-notes">Complex, for enthusiasts</span></a></li>
+                        <li><a href="product.html?id=decaf-dreams"><span class="oc-name">Decaf Dreams</span><span class="oc-notes">Swiss Water Process decaf</span></a></li>
+                    </ul>
+                    <a href="shop.html#signature-blends" class="cta-button">Shop Blends</a>
+                </div>
+                <div class="story-image">
+                    <img src="images/ourstory2.jpeg" alt="Signature blend coffees on a wooden table">
+                </div>
+            </div>
+        </section>
+
+        <!-- Brew Guide -->
+        <section class="oc-brew" id="brew" aria-labelledby="brewTitle">
+            <div class="oc-container">
+                <div class="oc-brew-head">
+                    <div>
+                        <p class="eyebrow">Brew guide</p>
+                        <h2 id="brewTitle">Barista-quality coffee at home</h2>
+                        <p class="oc-lede">From pour-over to espresso, here's how to get the most from every bean. Every setup is different, so treat these as flexible guidelines rather than strict rules.</p>
+                    </div>
+                    <div class="oc-arrows">
+                        <button type="button" class="oc-arrow" data-dir="-1" aria-label="Previous brew method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+                        <button type="button" class="oc-arrow" data-dir="1" aria-label="Next brew method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+                    </div>
+                </div>
+            </div>
+            <ul class="oc-track" tabindex="0" aria-label="Brew methods">
+                <li class="oc-card">
+                    <div class="oc-media"><img src="images/artisanlatte.jpeg" alt="A latte with latte art" loading="lazy"></div>
+                    <h3>Artisan Lattes</h3>
+                    <p>Expertly crafted lattes featuring our signature espresso blend and silky smooth microfoam.</p>
+                    <a href="product.html?id=espresso-artisan" class="text-link">Shop Espresso Artisan</a>
+                </li>
+                <li class="oc-card">
+                    <div class="oc-media"><img src="images/coldbrew.jpeg" alt="A glass of cold brew coffee" loading="lazy"></div>
+                    <h3>Cold Brew</h3>
+                    <p>Smooth and refreshing cold brew, steeped for 24 hours to perfection.</p>
+                    <a href="shop.html" class="text-link">Shop coffee</a>
+                </li>
+                <li class="oc-card">
+                    <div class="oc-media"><img src="images/pourover.jpeg" alt="Pour-over coffee brewing" loading="lazy"></div>
+                    <h3>Pour Over</h3>
+                    <p>Precise, hand-crafted pour-over that highlights the bright, unique character of our single-origin beans.</p>
+                    <a href="shop.html#single-origin" class="text-link">Shop single-origins</a>
+                </li>
+                <li class="oc-card">
+                    <div class="oc-media"><img src="images/expresso.jpeg" alt="A shot of espresso" loading="lazy"></div>
+                    <h3>Espresso</h3>
+                    <p>Rich, bold espresso, balanced for barista-quality shots at home.</p>
+                    <a href="product.html?id=espresso-artisan" class="text-link">Shop Espresso Artisan</a>
+                </li>
+                <li class="oc-card">
+                    <div class="oc-media"><img src="images/frenchpress.jpeg" alt="A French press of coffee" loading="lazy"></div>
+                    <h3>French Press</h3>
+                    <p>Smooth, full-bodied and aromatic, showcasing the deep flavors of our signature blends.</p>
+                    <a href="shop.html#signature-blends" class="text-link">Shop blends</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Brew tips -->
+        <section class="oc-tips" aria-label="Brewing tips">
+            <div class="oc-container oc-tips-grid">
+                <div class="oc-tip">
+                    <span class="value-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg></span>
+                    <h3>Everything shapes the cup</h3>
+                    <p>Your grinder, your coffee and even your tap water change the flavor.</p>
+                </div>
+                <div class="oc-tip">
+                    <span class="value-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></span>
+                    <h3>Adjust to taste</h3>
+                    <p>Experimentation is key. Change one variable at a time until it tastes right to you.</p>
+                </div>
+                <div class="oc-tip">
+                    <span class="value-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+                    <h3>Enjoy the process</h3>
+                    <p>Great coffee isn't just about the brew. It's about the joy of making it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coffee Club -->
+        <section class="oc-club">
+            <div class="oc-container oc-club-inner">
+                <div>
+                    <p class="eyebrow">Can't choose just one?</p>
+                    <h2>Join the Coffee Club</h2>
+                    <p>A new curated coffee arrives each month for three months, ground the way you brew. $249.99 for all three.</p>
+                </div>
+                <a href="club.html" class="cta-button">Join the Coffee Club</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button type="button" id="closeCart" class="close-cart" aria-label="Close cart">
+                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <span>$0.00</span>
+                </div>
+                <button class="cart-button">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column footer-logo">
+                    <img src="images/cristogold.png" alt="Cristo Republic Coffee Logo">
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="club.html">Coffee Club</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">LEARN</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Coffee</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">FOLLOW US</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">
+                            <img src="images/x.png" alt="X">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/youtube.png" alt="YouTube">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Cristo Republic Coffee - All Rights Reserved</p>
+                <p class="footer-location"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>San Salvador, El Salvador</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Brew guide carousel: arrows scroll the track one card at a time
+        (function () {
+            const track = document.querySelector('.oc-track');
+            if (!track) return;
+            const arrows = document.querySelectorAll('.oc-arrow');
+            const step = () => {
+                const card = track.querySelector('.oc-card');
+                return card ? card.getBoundingClientRect().width + 24 : 300;
+            };
+            const update = () => {
+                const max = track.scrollWidth - track.clientWidth - 2;
+                arrows[0].disabled = track.scrollLeft <= 2;
+                arrows[1].disabled = track.scrollLeft >= max;
+            };
+            arrows.forEach((btn) => btn.addEventListener('click', () => {
+                track.scrollBy({ left: step() * Number(btn.dataset.dir), behavior: 'smooth' });
+            }));
+            track.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+            update();
+        })();
+    </script>
+    <script src="cart.js"></script>
+</body>
+</html>

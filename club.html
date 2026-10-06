@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Club | Cristo Republic Coffee</title>
+    <meta name="description" content="Join the Cristo Coffee Club: three months of curated Salvadoran coffee, ground your way and delivered to your door, for $249.99.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Cristo Republic Coffee Logo">
+            </a>
+            <nav class="main-nav" id="mainNav" aria-label="Main">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="ourcoffee.html" class="nav-link">Our Coffee</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item nav-item-club"><a href="club.html" class="nav-link">Join the Coffee Club</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group">
+                <a href="#" class="icon-link" aria-label="Search">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Account">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                </a>
+                <a href="#" class="icon-link" id="cartButton" aria-label="Cart">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count" hidden>0</span>
+                </a>
+                <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path class="menu-line menu-line-1" d="M4 7h16"/><path class="menu-line menu-line-2" d="M4 12h16"/><path class="menu-line menu-line-3" d="M4 17h16"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 80px;" class="club-page">
+        <!-- Club Hero -->
+        <section class="shop-hero club-hero">
+            <div class="shop-hero-text">
+                <p class="eyebrow">The Cristo Coffee Club</p>
+                <h1>Join the Coffee Club</h1>
+                <h2>Three months of El Salvador, delivered to your door.</h2>
+                <p>A new curated coffee from the Salvadoran highlands arrives each month, ground the way you brew it.</p>
+                <p class="club-hero-price"><strong>$249.99</strong> for three months</p>
+                <div class="hero-actions">
+                    <a href="#join" class="cta-button">Join the Club</a>
+                    <a href="#how" class="ghost-button">How it works</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statement -->
+        <section class="club-statement">
+            <div class="club-container">
+                <p class="eyebrow">Why we started the club</p>
+                <p class="club-statement-text">Three generations of growing coffee in the Salvadoran highlands, now delivered to your door.</p>
+            </div>
+        </section>
+
+        <!-- Reasons -->
+        <section class="club-reasons" aria-labelledby="reasonsTitle">
+            <div class="club-container">
+                <div class="club-section-head">
+                    <p class="eyebrow">Four reasons to join</p>
+                    <h2 id="reasonsTitle">More than a bag of coffee</h2>
+                </div>
+                <div class="club-reason-grid">
+                    <article class="club-reason">
+                        <span class="club-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                        <h3>Something new every month</h3>
+                        <p>Each month brings a new curated coffee, so three months becomes a tour of El Salvador in your cup.</p>
+                    </article>
+                    <article class="club-reason">
+                        <span class="club-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg></span>
+                        <h3>Ground for your brewer</h3>
+                        <p>Whole bean, drip, pour-over, French press or espresso. Choose once and every delivery is ready for the way you make coffee.</p>
+                    </article>
+                    <article class="club-reason">
+                        <span class="club-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+                        <h3>Grown the right way</h3>
+                        <p>Direct trade with local farmers, fair wages, organic farming practices and community development programs stand behind every cup.</p>
+                    </article>
+                    <article class="club-reason">
+                        <span class="club-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span>
+                        <h3>A gift that keeps arriving</h3>
+                        <p>The club is part of our Curated Gift Sets. Give it once, and the person you love opens a new coffee every month for three months.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="club-how" id="how" aria-labelledby="howTitle">
+            <div class="club-container">
+                <div class="club-section-head">
+                    <p class="eyebrow">How it works</p>
+                    <h2 id="howTitle">Three simple steps</h2>
+                </div>
+                <ol class="club-steps">
+                    <li>
+                        <span class="club-step-num">1</span>
+                        <h3>Choose your grind</h3>
+                        <p>Pick from five grinds, from whole bean to espresso.</p>
+                    </li>
+                    <li>
+                        <span class="club-step-num">2</span>
+                        <h3>Join for $249.99</h3>
+                        <p>One price covers all three months of coffee.</p>
+                    </li>
+                    <li>
+                        <span class="club-step-num">3</span>
+                        <h3>Brew something new</h3>
+                        <p>A curated coffee arrives at your door each month.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- From the farm -->
+        <section class="story-section alt">
+            <div class="story-container">
+                <div class="story-image">
+                    <img src="images/coffegirl.jpeg" alt="A coffee picker harvesting ripe red cherries on a Salvadoran farm">
+                </div>
+                <div class="story-text">
+                    <p class="eyebrow">From the Cristo family</p>
+                    <h2>Chosen by people who grow it</h2>
+                    <p>Alejandro Cristo brings over 50 years of experience in coffee farming. His daughter Sarah, our CEO, holds a master's degree in agribusiness from Cornell University. Together they blend traditional methods with modern innovation, and that is the standard every club coffee is chosen by.</p>
+                    <p>Our coffee comes from the regions that give Salvadoran coffee its character, from the high-altitude farms of Santa Ana to the volcanic soils of Usulután.</p>
+                    <a href="aboutus.html" class="text-link">Read our story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regions -->
+        <section class="club-regions" aria-labelledby="regionsTitle">
+            <div class="club-container">
+                <div class="club-section-head">
+                    <p class="eyebrow">A taste of where it comes from</p>
+                    <h2 id="regionsTitle">Four regions, four characters</h2>
+                    <p class="club-lede">These are the single-origin coffees from our collection. Each one shows how much the land changes what ends up in your cup.</p>
+                </div>
+                <div class="club-region-grid">
+                    <a class="club-region" href="product.html?id=santa-ana-reserve">
+                        <span class="club-region-name">Santa Ana</span>
+                        <span class="club-region-roast">Medium roast</span>
+                        <span class="club-region-notes">Chocolate · Citrus</span>
+                    </a>
+                    <a class="club-region" href="product.html?id=usulutan-heights">
+                        <span class="club-region-name">Usulután</span>
+                        <span class="club-region-roast">Light roast</span>
+                        <span class="club-region-notes">Floral · Honey</span>
+                    </a>
+                    <a class="club-region" href="product.html?id=la-libertad-estate">
+                        <span class="club-region-name">La Libertad</span>
+                        <span class="club-region-roast">Dark roast</span>
+                        <span class="club-region-notes">Caramel · Nutty</span>
+                    </a>
+                    <a class="club-region" href="product.html?id=chalatenango-select">
+                        <span class="club-region-name">Chalatenango</span>
+                        <span class="club-region-roast">Medium-dark roast</span>
+                        <span class="club-region-notes">Berry</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commitments -->
+        <section class="club-promise" aria-labelledby="promiseTitle">
+            <div class="club-container">
+                <div class="club-section-head">
+                    <p class="eyebrow">What your membership supports</p>
+                    <h2 id="promiseTitle">Good coffee, grown responsibly</h2>
+                </div>
+                <ul class="club-promise-list">
+                    <li>Direct trade relationships with local farmers</li>
+                    <li>Organic farming practices and certification</li>
+                    <li>Community development programs</li>
+                    <li>Fair wages</li>
+                    <li>Safe working facilities</li>
+                    <li>Investment in renewable energy at our facilities</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Join -->
+        <section class="club-join" id="join" aria-labelledby="joinTitle">
+            <div class="club-container club-join-grid">
+                <form class="club-join-card" onsubmit="return false;">
+                    <p class="eyebrow">The Coffee Club</p>
+                    <h2 id="joinTitle">Start your three months</h2>
+                    <p class="club-price"><span>$249.99</span> for three months</p>
+                    <p class="club-price-note">That works out to about $83 a month for a new curated coffee at your door.</p>
+                    <ul class="club-included">
+                        <li>A new curated coffee each month</li>
+                        <li>Ground your way, or whole bean</li>
+                        <li>Delivered to your door</li>
+                    </ul>
+                    <label for="clubGrind">Your grind</label>
+                    <select id="clubGrind" name="grind">
+                        <option>Whole bean</option>
+                        <option>Drip</option>
+                        <option>Pour-over</option>
+                        <option>French press</option>
+                        <option>Espresso</option>
+                    </select>
+                    <button type="button" class="add-to-cart club-join-button" data-id="monthly-subscription">Join the Club</button>
+                    <p class="club-alt">Want to taste first? Try the <a href="product.html?id=tasters-collection">Taster's Collection</a>, four blends for $89.99.</p>
+                </form>
+                <div class="club-faq">
+                    <h2>Questions</h2>
+                    <details>
+                        <summary>What do I get?</summary>
+                        <p>Three months of curated coffee from El Salvador. A new coffee arrives at your door each month.</p>
+                    </details>
+                    <details>
+                        <summary>How much does it cost?</summary>
+                        <p>$249.99 covers all three months, about $83 a month.</p>
+                    </details>
+                    <details>
+                        <summary>Which grinds can I choose?</summary>
+                        <p>Whole bean, drip, pour-over, French press or espresso. Pick the one that fits your brewer before you join.</p>
+                    </details>
+                    <details>
+                        <summary>Can I give it as a gift?</summary>
+                        <p>Yes. The club is part of our Curated Gift Sets, so it makes a gift that arrives three times.</p>
+                    </details>
+                    <details>
+                        <summary>Where does the coffee come from?</summary>
+                        <p>From the Salvadoran highlands, where the Cristo family has grown coffee for three generations. <a href="ourcoffee.html">Explore our coffee</a>.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button type="button" id="closeCart" class="close-cart" aria-label="Close cart">
+                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <span>$0.00</span>
+                </div>
+                <button class="cart-button">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column footer-logo">
+                    <img src="images/cristogold.png" alt="Cristo Republic Coffee Logo">
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="club.html">Coffee Club</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">LEARN</h3>
+                    <ul class="footer-links">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourcoffee.html">Our Coffee</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">FOLLOW US</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">
+                            <img src="images/x.png" alt="X">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/youtube.png" alt="YouTube">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Cristo Republic Coffee - All Rights Reserved</p>
+                <p class="footer-location"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>San Salvador, El Salvador</p>
+            </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

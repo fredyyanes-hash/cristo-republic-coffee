@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristo Republic Coffee - About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Cristo Republic Coffee Logo">
+            </a>
+            <nav class="main-nav" id="mainNav" aria-label="Main">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link" aria-current="page">About Us</a></li>
+                    <li class="nav-item"><a href="ourcoffee.html" class="nav-link">Our Coffee</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item nav-item-club"><a href="club.html" class="nav-link">Join the Coffee Club</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group">
+                <a href="#" class="icon-link" aria-label="Search">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Account">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                </a>
+                <a href="#" class="icon-link" id="cartButton" aria-label="Cart">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count" hidden>0</span>
+                </a>
+                <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path class="menu-line menu-line-1" d="M4 7h16"/><path class="menu-line menu-line-2" d="M4 12h16"/><path class="menu-line menu-line-3" d="M4 17h16"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 80px;">
+        <!-- Alejandro Cristo Section -->
+        <section class="story-section parallax flip-horizontal alejandro-cristo" style="background-image: url('images/aboutus1.jpeg');">
+            <div class="story-container">
+                <div class="story-text about-text-overlay">
+                    <h1>Alejandro Cristo</h1>
+                    <h2>Discover the Heart of El Salvador in Every Cup</h2>
+                    <p>Born and raised in the coffee-growing regions of El Salvador, Alejandro Cristo shares a deep connection with coffee cultivation that spans generations. His vision was simple yet profound: to bring the authentic taste of El Salvador’s finest coffee to the world while ensuring sustainable farming practices and a fair trade relationship with local farmers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Founders Section -->
+        <section class="story-section about-section founders">
+            <div class="story-container">
+                <div class="story-text">
+                    <h2>The Founders</h2>
+                    <h3>Sarah and Alejandro Cristo</h3>
+                    <p>Sarah Cristo, the visionary CEO of Cristo Republic Coffee, carries forward the legacy of deep-rooted family wisdom. Born into a family of coffee farmers in El Salvador, Sarah pursued her education in Cornell University’s College of Agriculture and Life Sciences, renowned as one of the top agricultural programs in the country. With a master’s degree in agribusiness, she honed her expertise in sustainable agriculture and global trade. Alejandro Cristo, her father, is the heart of Cristo Republic Coffee. With over 50 years of experience in coffee farming, Alejandro brings a wealth of knowledge and passion to the company. Together, Sarah and Alejandro have revitalized the Cristo family legacy, blending traditional methods with modern innovation to create exceptional coffee while honoring their heritage and the land that sustains it.</p>
+                    <a href="#" class="cta-button">Read More</a>
+                </div>
+                <div class="story-image">
+                    <img src="images/aboutus2.jpeg" alt="Sarah and Alejandro Cristo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability and Quality Section -->
+        <section class="story-section alt">
+            <div class="story-container reverse">
+                <div class="story-text">
+                    <h2>Eco Friendly</h2>
+                    <p>Our commitment to integrity goes beyond premium coffee. We believe in creating a positive impact throughout our entire supply chain, from farm to cup. This includes:</p>
+                    <ul class="checklist">
+                        <li>Direct trade relationships with local farmers</li>
+                        <li>Organic farming practices and certification</li>
+                        <li>Community development programs</li>
+                        <li>Fair wages</li>
+                        <li>Safe working facilities</li>
+                        <li>Investment in renewable energy at our facilities</li>
+                    </ul>
+                    <a href="#" class="cta-button">Read More</a>
+                </div>
+                <div class="story-image">
+                    <img src="images/aboutus3.jpeg" alt="Coffee plants on a hillside farm under a rainbow">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button type="button" id="closeCart" class="close-cart" aria-label="Close cart">
+                    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <span>$0.00</span>
+                </div>
+                <button class="cart-button">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column footer-logo">
+                    <img src="images/cristogold.png" alt="Cristo Republic Coffee Logo">
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="club.html">Coffee Club</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">LEARN</h3>
+                    <ul class="footer-links">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourcoffee.html">Our Coffee</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">FOLLOW US</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">
+                            <img src="images/x.png" alt="X">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/youtube.png" alt="YouTube">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="images/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Cristo Republic Coffee - All Rights Reserved</p>
+                <p class="footer-location"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>San Salvador, El Salvador</p>
+            </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
