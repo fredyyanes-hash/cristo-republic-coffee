@@ -38,13 +38,13 @@ const PRODUCTS = {
         name: 'Morning Ritual Blend', price: 21.99, category: 'Signature Blends', coffee: true,
         roast: 'Signature blend', notes: ['Balanced'],
         description: 'Balanced blend perfect for your daily cup.',
-        image: 'https://public.readdy.ai/ai/img_res/a3cd9a18318013fd255866db230dae78.jpg'
+        image: 'images/card1.jpeg'
     },
     'espresso-artisan': {
         name: 'Espresso Artisan', price: 23.99, category: 'Signature Blends', coffee: true,
         roast: 'Espresso roast', notes: ['Rich', 'Bold'],
         description: 'Rich and bold espresso blend.',
-        image: 'https://public.readdy.ai/ai/img_res/11898d65036e803f8733569d5ddbfb8b.jpg'
+        image: 'images/card3.jpeg'
     },
     'decaf-dreams': {
         name: 'Decaf Dreams', price: 20.99, category: 'Signature Blends', coffee: true,
@@ -64,25 +64,25 @@ const PRODUCTS = {
         name: "Taster's Collection", price: 89.99, category: 'Curated Gift Sets', coffee: true,
         roast: 'Gift set', notes: ['Four blends'],
         description: 'Four signature blends in one box.',
-        image: 'https://public.readdy.ai/ai/img_res/0f02f0cbd8c52925cab94ad2dcf7cdb5.jpg'
+        image: 'images/card2.jpeg'
     },
     'brewing-essentials': {
         name: 'Brewing Essentials', price: 149.99, category: 'Curated Gift Sets', coffee: true,
         roast: 'Gift set', notes: ['Starter kit', 'Equipment'],
         description: 'Complete starter kit with equipment.',
-        image: 'https://public.readdy.ai/ai/img_res/1f2fd887a7106c47e61f9ca6e3593049.jpg'
+        image: 'images/frenchpress.jpeg'
     },
     'connoisseurs-choice': {
         name: "Connoisseur's Choice", price: 199.99, category: 'Curated Gift Sets', coffee: true,
         roast: 'Gift set', notes: ['Premium', 'Tasting notes'],
         description: 'Premium selection with tasting notes.',
-        image: 'https://public.readdy.ai/ai/img_res/aadf4cc1f8ef3d04d59dd3c70f735b75.jpg'
+        image: 'images/ourstory2.jpeg'
     },
     'monthly-subscription': {
         name: 'Monthly Subscription', price: 249.99, category: 'Curated Gift Sets', coffee: true,
         roast: 'Subscription', notes: ['Three months'],
         description: 'Three months of curated coffee.',
-        image: 'https://public.readdy.ai/ai/img_res/e18b82781fe21b355004c6b46f2efa4f.jpg'
+        image: 'images/ourstory1.jpeg'
     }
 };
 
