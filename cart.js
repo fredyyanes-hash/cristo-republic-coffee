@@ -12,25 +12,25 @@ const PRODUCTS = {
         name: 'Santa Ana Reserve', price: 24.99, category: 'Single-Origin Coffees', coffee: true,
         roast: 'Medium roast', notes: ['Chocolate', 'Citrus'],
         description: 'Medium roast with notes of chocolate and citrus.',
-        image: 'https://rhoadsroast-coffees.com/cdn/shop/products/el-salvador-santa-ana-reserva-organic-natural-ep-fresh-100percent-arabica-coffee-beans-2-5-lbs-10-lbs-selections-rhoadsroast-coffees-and-importers-4_1500x.progressive.jpg?v=1657563861'
+        image: 'images/blogcard2.jpeg?v=1657563861'
     },
     'usulutan-heights': {
         name: 'Usulután Heights', price: 22.99, category: 'Single-Origin Coffees', coffee: true,
         roast: 'Light roast', notes: ['Floral', 'Honey'],
         description: 'Light roast with floral and honey notes.',
-        image: 'https://rhoadsroast-coffees.com/cdn/shop/products/2-lbs-5-lbs-el-salvador-shg-red-bourbon-buenos-aires-fresh-roasted-100percent-arabica-coffee-beans-rhoadsroast-coffees-and-importers-5_1500x.progressive.jpg?v=1657627708'
+        image: 'images/hero3.jpeg?v=1657627708'
     },
     'la-libertad-estate': {
         name: 'La Libertad Estate', price: 26.99, category: 'Single-Origin Coffees', coffee: true,
         roast: 'Dark roast', notes: ['Caramel', 'Nutty'],
         description: 'Dark roast with caramel and nutty notes.',
-        image: 'https://rhoadsroast-coffees.com/cdn/shop/products/el-salvador-shg-santa-maria-rfa-fresh-roasted-100percent-arabica-coffee-beans-rhoadsroast-coffees-and-importers-5_1500x.progressive.jpg?v=1657563721'
+        image: 'images/coffee.jpeg?v=1657563721'
     },
     'chalatenango-select': {
         name: 'Chalatenango Select', price: 25.99, category: 'Single-Origin Coffees', coffee: true,
         roast: 'Medium-dark roast', notes: ['Berry'],
         description: 'Medium-dark roast with berry notes.',
-        image: 'https://rhoadsroast-coffees.com/cdn/shop/products/2-5-lbs-el-salvador-santa-ana-reserva-organic-natural-ep-fresh-lightmedium-roast-100percent-arabica-coffee-beans-rhoadsroast-coffees-and-importers-4_1500x.progressive.jpg?v=1657599139'
+        image: 'images/hero1.jpeg?v=1657599139'
     },
 
     // Signature blends
@@ -50,13 +50,13 @@ const PRODUCTS = {
         name: 'Decaf Dreams', price: 20.99, category: 'Signature Blends', coffee: true,
         roast: 'Swiss Water Process decaf', notes: ['Decaf'],
         description: 'Swiss Water Process decaf blend.',
-        image: 'https://cdn.dribbble.com/users/973/screenshots/2934743/attachments/609308/coffee-beans-2.jpg'
+        image: 'images/bloghero.jpeg'
     },
     'baristas-choice': {
         name: "Barista's Choice", price: 27.99, category: 'Signature Blends', coffee: true,
         roast: 'Signature blend', notes: ['Complex'],
         description: 'Complex blend for coffee enthusiasts.',
-        image: 'https://i.pinimg.com/736x/c4/3a/05/c43a055deadcea6b1d021012e29492ae.jpg'
+        image: 'images/expresso.jpeg'
     },
 
     // Curated gift sets
