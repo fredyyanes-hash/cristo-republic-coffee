@@ -1789,3 +1789,128 @@ svg.nav-icon {
 .blog-separator {
     background-image: none;
 }
+
+/* =========================================================
+   10. Hero text flow (Nov 2026)
+   Every hero uses the same column width, the same type steps
+   and the same spacing, and lines break evenly instead of
+   leaving one word on its own line.
+   ========================================================= */
+.slide-content,
+.shop-hero-text,
+.story-section.alejandro-cristo .about-text-overlay,
+.story-section.our-coffee-hero .about-text-overlay,
+.blog-hero-container {
+    max-width: 600px;
+    width: 100%;
+}
+.story-section.alejandro-cristo .about-text-overlay {
+    text-align: left;
+    padding: 0;
+    background: none;
+    max-width: 520px;
+}
+/* Home slides are positioned, so they get a width from left/right instead */
+.slide-content {
+    width: auto;
+    right: var(--edge);
+}
+.blog-hero-container {
+    box-sizing: border-box;
+}
+
+/* Titles: balanced lines, a little tighter */
+.slide-content h1,
+.shop-hero-text h1,
+.about-text-overlay h1,
+.blog-hero-title {
+    font-size: clamp(2.75rem, 5.4vw, 4.5rem) !important;
+    line-height: 0.95 !important;
+    margin: 0 0 18px !important;
+    text-wrap: balance;
+}
+
+/* Subtitle: one step down from a section heading so it reads as a lead-in */
+.slide-content h2,
+.shop-hero-text h2,
+.about-text-overlay h2 {
+    font-size: clamp(1.3rem, 2.1vw, 1.65rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    max-width: 26em;
+    margin: 0 0 16px !important;
+    text-wrap: balance;
+}
+/* Home slide 2 has no title, so its heading stays title-sized */
+.slide-content h2:first-child {
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem) !important;
+    font-weight: 700 !important;
+}
+
+/* Body copy: comfortable line length, no lonely last word */
+.slide-content p,
+.shop-hero-text p,
+.about-text-overlay p,
+.blog-hero-subtitle {
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
+    max-width: 34em;
+    margin: 0 0 28px !important;
+    text-wrap: pretty;
+}
+.slide-content p br {
+    display: none;
+}
+.shop-hero-text .eyebrow {
+    margin: 0 0 14px !important;
+}
+.club-hero-price {
+    margin-top: -8px !important;
+}
+.slide-content .hero-actions,
+.shop-hero-text .hero-actions,
+.about-text-overlay .hero-actions {
+    margin-top: 0;
+}
+
+/* Blog: same rhythm as the other heroes */
+.blog-hero-subtitle {
+    font-weight: 500;
+}
+.newsletter-subscribe h3 {
+    margin: 0 0 12px !important;
+}
+
+@media (max-width: 768px) {
+    .slide-content h1,
+    .shop-hero-text h1,
+    .about-text-overlay h1,
+    .blog-hero-title {
+        font-size: clamp(2.5rem, 11vw, 3rem) !important;
+        margin-bottom: 14px !important;
+    }
+    .slide-content h2,
+    .shop-hero-text h2,
+    .about-text-overlay h2 {
+        font-size: 1.2rem !important;
+        margin-bottom: 12px !important;
+    }
+    .slide-content p,
+    .shop-hero-text p,
+    .about-text-overlay p,
+    .blog-hero-subtitle {
+        font-size: 0.98rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 22px !important;
+    }
+    .club-hero-price {
+        margin-top: -4px !important;
+    }
+    .hero-actions {
+        gap: 12px;
+    }
+}
+/* Club eyebrow stays readable over the bright part of the photo */
+.shop-hero-text .eyebrow {
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55) !important;
+}
