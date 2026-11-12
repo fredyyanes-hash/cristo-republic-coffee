@@ -1784,3 +1784,8 @@ svg.nav-icon {
         max-height: 520px;
     }
 }
+
+/* The coffee-bean-separator.png pattern was never in the images folder; drop the broken request */
+.blog-separator {
+    background-image: none;
+}
